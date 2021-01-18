@@ -2,7 +2,7 @@ import React from 'react'
 import Header from './Header'
 import Main from './Main'
 import Footer from './Footer'
-import PopupWithForm from './popupWithForm'
+import PopupWithForm from './PopupWithForm'
 import ImagePopup from './ImagePopup'
 
 function App() {
@@ -10,11 +10,7 @@ function App() {
     const [isEditPlacePopupOpen, setIsEditPlace] = React.useState(false);
     const [isEditAvatarPopupOpen, setIsEditAvatar] = React.useState(false);
     const [isEditProfilePopupOpen, setIsEditProfile] = React.useState(false);
-    const [selectedCard, setSelectedCard] = React.useState();
-
-    function handleCardClick(props){
-        setSelectedCard(props);
-    }
+    const [selectedCard, setSelectedCard] = React.useState({});
 
     function handleEditAvatarClick() {
         setIsEditAvatar(true);
@@ -28,15 +24,17 @@ function App() {
         setIsEditPlace(true);
     }
 
+    function handleCardClick(props){
+        setSelectedCard({status: true, title: props.name, links: props.link});
+    }
     function closeAllPopups() {
         setIsEditAvatar(false);
         setIsEditProfile(false);
         setIsEditPlace(false);
-        setSelectedCard(false);
+        setSelectedCard({});
     }
-
   return (
-  <body className="page">
+  <div className="page">
     <Header />
     <Main onEditProfile={handleEditProfileClick} onAddPlace={handleAddPlaceClick} onEditAvatar={handleEditAvatarClick} onCardClick={handleCardClick}/>
     <Footer />
@@ -74,7 +72,7 @@ function App() {
         </label>
         <button type="submit" className="popup__button popup__button_avatar_form">Сохранить</button>
     </PopupWithForm>
-  </body>
+  </div>
   );
 }
 

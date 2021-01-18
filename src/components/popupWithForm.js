@@ -1,7 +1,6 @@
 import React from 'react';
 
-function popupWithForm(props) {
-
+function PopupWithForm(props) {
     return(
     <section className={`popup ${props.name} ${props.isOpen ? 'popup_opened' : ''}`} id='edit__popup'>
         <form method="POST" className="popup__container" name={props.name}>
@@ -12,4 +11,4 @@ function popupWithForm(props) {
     </section>
     );
 }
-export default popupWithForm;
+export default PopupWithForm;

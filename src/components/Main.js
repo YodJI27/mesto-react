@@ -3,9 +3,9 @@ import api from '../utils/Api';
 import Card from './Card'
 
 function Main(props) {
-    const [userName, setUserName] = React.useState();
-    const [userDescription, setUserDescription] = React.useState();
-    const [userAvatar, setUserAvatar] =  React.useState();
+    const [userName, setUserName] = React.useState('');
+    const [userDescription, setUserDescription] = React.useState('');
+    const [userAvatar, setUserAvatar] =  React.useState('');
     const [cards, setCards] = React.useState([]);
 
     React.useEffect(_ => {
@@ -49,7 +49,7 @@ function Main(props) {
             {
                 cards.map(card => {
                     return (
-                        <Card card={card} onCardClick={props.onCardClick}/>
+                        <Card card={card} CardClick={props.onCardClick} key={card._id}/>
                     );
                 })
             }

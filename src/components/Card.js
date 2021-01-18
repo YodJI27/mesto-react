@@ -2,7 +2,7 @@ import React from 'react';
 
 function Card(props) {
     function handleClick() {
-        props.onCardClick(props.card.link);
+        props.CardClick(props.card);
     }
     return (
         <div className="cards__item">

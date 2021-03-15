@@ -37,7 +37,8 @@
 **Автор**  
 Илья Шнырев  
 Email: YodJI62@yandex.ru  
-Вконтакте: https://vk.com/shnerov  
+Вконтакте: https://vk.com/shnerov
+Habr: https://career.habr.com/yodji27
 
 ______________________________________________________________________________
 

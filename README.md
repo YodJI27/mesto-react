@@ -38,3 +38,12 @@
 Илья Шнырев  
 Email: YodJI62@yandex.ru  
 Вконтакте: https://vk.com/shnerov  
+
+
+#### Сборка
+
+Для запуска приложения
+`npm start`
+
+Для сборки версии в продакшен:
+`npm run deploy`
